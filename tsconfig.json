@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "commonJS",
+    "target": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "build",
+    "rootDir": "./src",
+    "outDir": "./lib",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,

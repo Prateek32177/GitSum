@@ -2,10 +2,10 @@
   "name": "gitsum",
   "version": "1.0.0",
   "description": "github action workflow summary creation library",
-  "main": "build/index.ts",
+  "main": "lib/index.ts",
   "scripts": {
     "build": "tsc",
-   "package":"ncc build build/index.js --source-map"
+   "package":"ncc build lib/index.js --source-map"
   },
   "keywords": [
     "github",
