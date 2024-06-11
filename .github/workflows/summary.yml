@@ -10,9 +10,17 @@ jobs:
     # Runs a single command using the runners shell
     - name: checkout
       uses: actions/checkout@v4
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+          node-version: '20.x'
 
     - name: install dependencies
       run: npm install
-
+    
+    - name: Build Project
+      run: npm build
+      
     - name: run script
       uses: Prateek32177/GitSum@feat_action_core
