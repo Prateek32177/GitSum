@@ -20,7 +20,7 @@ jobs:
       run: npm install
     
     - name: Build Project
-      run: npm build
-      
+      run: npm run build
+
     - name: run script
       uses: Prateek32177/GitSum@feat_action_core
