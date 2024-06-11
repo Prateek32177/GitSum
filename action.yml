@@ -1,0 +1,6 @@
+name: 'Github Summary builder action'
+description: 'Ease buildin summary of github action workflows'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
