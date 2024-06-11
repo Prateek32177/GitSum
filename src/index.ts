@@ -75,7 +75,7 @@ export const run = () => {
     .addQuote("hkjhjhkj")
     .addBreak()
     .addCodeBlock("coede block")
-    .addDetails("open details", "nice detail")
+    .addDetails("open details",html)
     .addHeading("Summary headline")
     .addImage("../images/qrimage.png", "QR code")
     .addLink("DeazyQR", "https://deazyqr.vercel.app/")
