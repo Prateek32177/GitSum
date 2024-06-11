@@ -33,7 +33,18 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 const html = `
-<font color="green">Hi, My Name is Prateek jain</font>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Document</title> 
+</head> 
+<body> 
+	<!—Inline code—> 
+	<p style="color: green">Hello, World! </p>  
+</body> 
+</html> 
 `;
 const run = () => {
     core.summary.addHeading("hello prateek").write();
