@@ -2,6 +2,23 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 4822:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.run = void 0;
+const utils_1 = __nccwpck_require__(918);
+const run = () => {
+    (0, utils_1.logInfo)("Hi My name is prateek jain");
+};
+exports.run = run;
+(0, exports.run)();
+
+
+/***/ }),
+
+/***/ 918:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -30,37 +47,34 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.run = void 0;
+exports.logInfo = void 0;
 const core = __importStar(__nccwpck_require__(2186));
-const html = `
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>Document</title> 
-</head> 
-<body> 
-	<!—Inline code—> 
-	<p style="color: green">Hello, World! </p>  
-</body> 
-</html> 
-`;
-const run = () => {
-    core.summary.addHeading("hello prateek").write();
-    core.summary
-        .addQuote("hkjhjhkj")
-        .addBreak()
-        .addCodeBlock("coede block")
-        .addDetails("open details", html)
-        .addHeading("Summary headline")
-        .addLink("DeazyQR", "https://deazyqr.vercel.app/")
-        .addRaw(html)
-        .addSeparator()
-        .write();
-};
-exports.run = run;
-(0, exports.run)();
+const ColorReset = "\x1b[0m";
+var TextEffect;
+(function (TextEffect) {
+    TextEffect["Bright"] = "\u001B[1m";
+    TextEffect["Dim"] = "\u001B[2m";
+    TextEffect["Underscore"] = "\u001B[4m";
+    TextEffect["Blink"] = "\u001B[5m";
+    TextEffect["Reverse"] = "\u001B[7m";
+    TextEffect["Hidden"] = "\u001B[8m";
+})(TextEffect || (TextEffect = {}));
+var ForegroundColor;
+(function (ForegroundColor) {
+    ForegroundColor["Black"] = "\u001B[30m";
+    ForegroundColor["Red"] = "\u001B[31m";
+    ForegroundColor["Green"] = "\u001B[32m";
+    ForegroundColor["Yellow"] = "\u001B[33m";
+    ForegroundColor["Blue"] = "\u001B[34m";
+    ForegroundColor["Magenta"] = "\u001B[35m";
+    ForegroundColor["Cyan"] = "\u001B[36m";
+    ForegroundColor["White"] = "\u001B[37m";
+})(ForegroundColor || (ForegroundColor = {}));
+function logInfo(message) {
+    const textFormat = `${TextEffect.Underscore}${ForegroundColor.Cyan}`;
+    core.summary.addCodeBlock(`${textFormat}${message}${ColorReset}`).write();
+}
+exports.logInfo = logInfo;
 
 
 /***/ }),
